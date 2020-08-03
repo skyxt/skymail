@@ -4,7 +4,7 @@ buildscript {
     }
     repositories {
         mavenLocal()
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven{ url 'https://maven.aliyun.com/repository/public'}
         mavenCentral()
     }
     dependencies {
@@ -23,7 +23,7 @@ allprojects{
 
     repositories {
         mavenLocal()
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven{ url 'https://maven.aliyun.com/repository/public'}
         mavenCentral()
     }
     tasks.withType(JavaCompile) {
@@ -39,7 +39,7 @@ subprojects {
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
     repositories {
         mavenLocal()
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven{ url 'https://maven.aliyun.com/repository/public'}
         mavenCentral()
     }
 }
