@@ -1,0 +1,75 @@
+buildscript {
+    ext {
+        springBootVersion = '2.3.2.RELEASE'
+    }
+    repositories {
+        mavenLocal()
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework:spring-context-support'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+    implementation ('com.baomidou:mybatis-plus-boot-starter') {
+        exclude group: 'com.baomidou', module: 'mybatis-plus-generator'
+    }
+    implementation 'mysql:mysql-connector-java'
+//    implementation 'com.oracle:ojdbc6'
+    implementation 'com.microsoft.sqlserver:sqljdbc4'
+    implementation 'org.postgresql:postgresql'
+    implementation 'com.alibaba:druid-spring-boot-starter'
+    implementation ('org.quartz-scheduler:quartz') {
+        exclude group: 'com.mchange', module: 'c3p0'
+    }
+    implementation 'commons-lang:commons-lang'
+    implementation 'commons-fileupload:commons-fileupload'
+    implementation 'commons-io:commons-io'
+    implementation 'commons-codec:commons-codec'
+    implementation 'commons-configuration:commons-configuration'
+    implementation 'org.apache.shiro:shiro-core'
+    implementation 'org.apache.shiro:shiro-spring'
+    implementation 'io.jsonwebtoken:jjwt'
+    implementation 'com.github.axet:kaptcha'
+    implementation 'io.springfox:springfox-swagger2'
+    implementation 'io.springfox:springfox-swagger-ui'
+    implementation 'com.qiniu:qiniu-java-sdk'
+    implementation 'com.aliyun.oss:aliyun-sdk-oss'
+    implementation ('com.qcloud:cos_api') {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
+    implementation 'joda-time:joda-time'
+    implementation 'com.google.code.gson:gson'
+    implementation 'com.alibaba:fastjson'
+    implementation 'cn.hutool:hutool-all'
+    implementation 'org.projectlombok:lombok'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+
+test {
+    useJUnitPlatform()
+}
