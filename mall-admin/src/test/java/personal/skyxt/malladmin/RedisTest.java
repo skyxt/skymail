@@ -1,13 +1,15 @@
-package io.renren;
+package personal.skyxt.malladmin;
 
-import io.renren.common.utils.RedisUtils;
-import io.renren.modules.sys.entity.SysUserEntity;
+
+
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import personal.skyxt.malladmin.common.utils.RedisUtils;
+import personal.skyxt.malladmin.modules.sys.entity.SysUserEntity;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

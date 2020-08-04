@@ -1,4 +1,4 @@
-package io.renren;
+package personal.skyxt.malladmin;
 
 import io.renren.modules.app.utils.JwtUtils;
 import org.junit.Test;

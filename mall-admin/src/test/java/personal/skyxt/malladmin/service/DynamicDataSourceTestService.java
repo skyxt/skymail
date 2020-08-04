@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package io.renren.service;
+package personal.skyxt.malladmin.service;
 
 import io.renren.datasource.annotation.DataSource;
 import io.renren.modules.sys.dao.SysUserDao;

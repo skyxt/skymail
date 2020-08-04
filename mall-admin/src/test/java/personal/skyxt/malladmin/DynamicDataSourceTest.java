@@ -6,9 +6,9 @@
  * 版权所有，侵权必究！
  */
 
-package io.renren;
+package personal.skyxt.malladmin;
 
-import io.renren.service.DynamicDataSourceTestService;
+import personal.skyxt.malladmin.service.DynamicDataSourceTestService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
