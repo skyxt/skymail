@@ -12,7 +12,7 @@ import personal.skyxt.malladmin.common.utils.PageUtils;
 import personal.skyxt.malladmin.common.utils.R;
 import personal.skyxt.malladmin.modules.job.entity.ScheduleJobLogEntity;
 import personal.skyxt.malladmin.modules.job.service.ScheduleJobLogService;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

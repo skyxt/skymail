@@ -16,7 +16,7 @@ import personal.skyxt.malladmin.modules.sys.entity.SysMenuEntity;
 import personal.skyxt.malladmin.modules.sys.service.ShiroService;
 import personal.skyxt.malladmin.modules.sys.service.SysMenuService;
 import org.apache.commons.lang.StringUtils;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

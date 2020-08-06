@@ -8,13 +8,14 @@
 
 package personal.skyxt.malladmin.modules.job.controller;
 
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import personal.skyxt.malladmin.common.annotation.SysLog;
 import personal.skyxt.malladmin.common.utils.PageUtils;
 import personal.skyxt.malladmin.common.utils.R;
 import personal.skyxt.malladmin.common.validator.ValidatorUtils;
 import personal.skyxt.malladmin.modules.job.entity.ScheduleJobEntity;
 import personal.skyxt.malladmin.modules.job.service.ScheduleJobService;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

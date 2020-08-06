@@ -16,7 +16,7 @@ import personal.skyxt.malladmin.common.validator.ValidatorUtils;
 import personal.skyxt.malladmin.modules.sys.entity.SysRoleEntity;
 import personal.skyxt.malladmin.modules.sys.service.SysRoleMenuService;
 import personal.skyxt.malladmin.modules.sys.service.SysRoleService;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

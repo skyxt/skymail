@@ -18,7 +18,7 @@ class MallProductApplicationTests {
         AttrEntity attrEntity = new AttrEntity();
         attrEntity.setAttrName("test");
         boolean save = attrService.save(attrEntity);
-        Assert.isTrue(save);
+        Assert.isTrue(save, "测试完成");
     }
 
 }
