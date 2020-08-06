@@ -42,4 +42,8 @@ subprojects {
         maven{ url 'https://maven.aliyun.com/repository/public'}
         mavenCentral()
     }
+    dependencies {
+        compileOnly('org.springframework.boot:spring-boot-configuration-processor')
+        compileOnly('org.projectlombok:lombok')
+    }
 }

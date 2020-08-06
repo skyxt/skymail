@@ -5,3 +5,5 @@ include 'mall-order'
 include 'mall-product'
 include 'mall-ware'
 include 'mall-admin'
+include 'mall-common'
+
