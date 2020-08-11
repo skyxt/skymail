@@ -1,1 +1,2 @@
 rootProject.name = 'mall-product'
+includeFlat 'mall-common'

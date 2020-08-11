@@ -23,7 +23,7 @@ import personal.skyxt.malladmin.modules.oss.cloud.OSSFactory;
 import personal.skyxt.malladmin.modules.oss.entity.SysOssEntity;
 import personal.skyxt.malladmin.modules.oss.service.SysOssService;
 import personal.skyxt.malladmin.modules.sys.service.SysConfigService;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

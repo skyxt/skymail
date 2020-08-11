@@ -21,7 +21,7 @@ import personal.skyxt.malladmin.modules.sys.form.PasswordForm;
 import personal.skyxt.malladmin.modules.sys.service.SysUserRoleService;
 import personal.skyxt.malladmin.modules.sys.service.SysUserService;
 import org.apache.commons.lang.ArrayUtils;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
