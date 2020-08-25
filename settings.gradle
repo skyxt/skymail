@@ -6,4 +6,5 @@ include 'mall-product'
 include 'mall-ware'
 include 'mall-admin'
 include 'mall-common'
+include 'mall-gateway'
 
