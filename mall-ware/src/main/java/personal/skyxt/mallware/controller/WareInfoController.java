@@ -35,7 +35,7 @@ public class WareInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallware:wareinfo:list")
+    ////@RequiresPermissions("mallware:wareinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wareInfoService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class WareInfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallware:wareinfo:info")
+    ////@RequiresPermissions("mallware:wareinfo:info")
     public R info(@PathVariable("id") Long id){
 		WareInfoEntity wareInfo = wareInfoService.getById(id);
 
@@ -58,7 +58,7 @@ public class WareInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallware:wareinfo:save")
+    ////@RequiresPermissions("mallware:wareinfo:save")
     public R save(@RequestBody WareInfoEntity wareInfo){
 		wareInfoService.save(wareInfo);
 
@@ -69,7 +69,7 @@ public class WareInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallware:wareinfo:update")
+    ////@RequiresPermissions("mallware:wareinfo:update")
     public R update(@RequestBody WareInfoEntity wareInfo){
 		wareInfoService.updateById(wareInfo);
 
@@ -80,7 +80,7 @@ public class WareInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallware:wareinfo:delete")
+    ////@RequiresPermissions("mallware:wareinfo:delete")
     public R delete(@RequestBody Long[] ids){
 		wareInfoService.removeByIds(Arrays.asList(ids));
 

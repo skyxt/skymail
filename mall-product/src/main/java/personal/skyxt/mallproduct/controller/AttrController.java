@@ -34,7 +34,7 @@ public class AttrController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions(":attr:list")
+    ////@RequiresPermissions(":attr:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = attrService.queryPage(params);
 
@@ -46,7 +46,7 @@ public class AttrController {
      * 信息
      */
     @RequestMapping("/info/{attrId}")
-    //@RequiresPermissions(":attr:info")
+    ////@RequiresPermissions(":attr:info")
     public R info(@PathVariable("attrId") Long attrId){
 		AttrEntity attr = attrService.getById(attrId);
 
@@ -57,7 +57,7 @@ public class AttrController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions(":attr:save")
+    ////@RequiresPermissions(":attr:save")
     public R save(@RequestBody AttrEntity attr){
 		attrService.save(attr);
 
@@ -68,7 +68,7 @@ public class AttrController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions(":attr:update")
+    ////@RequiresPermissions(":attr:update")
     public R update(@RequestBody AttrEntity attr){
 		attrService.updateById(attr);
 
@@ -79,7 +79,7 @@ public class AttrController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions(":attr:delete")
+    ////@RequiresPermissions(":attr:delete")
     public R delete(@RequestBody Long[] attrIds){
 		attrService.removeByIds(Arrays.asList(attrIds));
 

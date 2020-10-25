@@ -35,7 +35,7 @@ public class SkuLadderController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallcoupon:skuladder:list")
+    ////@RequiresPermissions("mallcoupon:skuladder:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = skuLadderService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class SkuLadderController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallcoupon:skuladder:info")
+    ////@RequiresPermissions("mallcoupon:skuladder:info")
     public R info(@PathVariable("id") Long id){
 		SkuLadderEntity skuLadder = skuLadderService.getById(id);
 
@@ -58,7 +58,7 @@ public class SkuLadderController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallcoupon:skuladder:save")
+    ////@RequiresPermissions("mallcoupon:skuladder:save")
     public R save(@RequestBody SkuLadderEntity skuLadder){
 		skuLadderService.save(skuLadder);
 
@@ -69,7 +69,7 @@ public class SkuLadderController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallcoupon:skuladder:update")
+    ////@RequiresPermissions("mallcoupon:skuladder:update")
     public R update(@RequestBody SkuLadderEntity skuLadder){
 		skuLadderService.updateById(skuLadder);
 
@@ -80,7 +80,7 @@ public class SkuLadderController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallcoupon:skuladder:delete")
+    ////@RequiresPermissions("mallcoupon:skuladder:delete")
     public R delete(@RequestBody Long[] ids){
 		skuLadderService.removeByIds(Arrays.asList(ids));
 

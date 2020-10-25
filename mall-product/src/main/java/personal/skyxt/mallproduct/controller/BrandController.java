@@ -35,7 +35,7 @@ public class BrandController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions(":brand:list")
+    ////@RequiresPermissions(":brand:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = brandService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class BrandController {
      * 信息
      */
     @RequestMapping("/info/{brandId}")
-    //@RequiresPermissions(":brand:info")
+    ////@RequiresPermissions(":brand:info")
     public R info(@PathVariable("brandId") Long brandId){
 		BrandEntity brand = brandService.getById(brandId);
 
@@ -58,7 +58,7 @@ public class BrandController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions(":brand:save")
+    ////@RequiresPermissions(":brand:save")
     public R save(@RequestBody BrandEntity brand){
 		brandService.save(brand);
 
@@ -69,7 +69,7 @@ public class BrandController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions(":brand:update")
+    ////@RequiresPermissions(":brand:update")
     public R update(@RequestBody BrandEntity brand){
 		brandService.updateById(brand);
 
@@ -80,7 +80,7 @@ public class BrandController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions(":brand:delete")
+    ////@RequiresPermissions(":brand:delete")
     public R delete(@RequestBody Long[] brandIds){
 		brandService.removeByIds(Arrays.asList(brandIds));
 

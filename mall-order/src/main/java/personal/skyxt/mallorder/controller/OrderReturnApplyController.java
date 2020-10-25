@@ -35,7 +35,7 @@ public class OrderReturnApplyController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallorder:orderreturnapply:list")
+    ////@RequiresPermissions("mallorder:orderreturnapply:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = orderReturnApplyService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class OrderReturnApplyController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallorder:orderreturnapply:info")
+    ////@RequiresPermissions("mallorder:orderreturnapply:info")
     public R info(@PathVariable("id") Long id){
 		OrderReturnApplyEntity orderReturnApply = orderReturnApplyService.getById(id);
 
@@ -58,7 +58,7 @@ public class OrderReturnApplyController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallorder:orderreturnapply:save")
+    ////@RequiresPermissions("mallorder:orderreturnapply:save")
     public R save(@RequestBody OrderReturnApplyEntity orderReturnApply){
 		orderReturnApplyService.save(orderReturnApply);
 
@@ -69,7 +69,7 @@ public class OrderReturnApplyController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallorder:orderreturnapply:update")
+    ////@RequiresPermissions("mallorder:orderreturnapply:update")
     public R update(@RequestBody OrderReturnApplyEntity orderReturnApply){
 		orderReturnApplyService.updateById(orderReturnApply);
 
@@ -80,7 +80,7 @@ public class OrderReturnApplyController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallorder:orderreturnapply:delete")
+    ////@RequiresPermissions("mallorder:orderreturnapply:delete")
     public R delete(@RequestBody Long[] ids){
 		orderReturnApplyService.removeByIds(Arrays.asList(ids));
 

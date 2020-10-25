@@ -35,7 +35,7 @@ public class MemberCollectSubjectController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallmember:membercollectsubject:list")
+    ////@RequiresPermissions("mallmember:membercollectsubject:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = memberCollectSubjectService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class MemberCollectSubjectController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallmember:membercollectsubject:info")
+    ////@RequiresPermissions("mallmember:membercollectsubject:info")
     public R info(@PathVariable("id") Long id){
 		MemberCollectSubjectEntity memberCollectSubject = memberCollectSubjectService.getById(id);
 
@@ -58,7 +58,7 @@ public class MemberCollectSubjectController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallmember:membercollectsubject:save")
+    ////@RequiresPermissions("mallmember:membercollectsubject:save")
     public R save(@RequestBody MemberCollectSubjectEntity memberCollectSubject){
 		memberCollectSubjectService.save(memberCollectSubject);
 
@@ -69,7 +69,7 @@ public class MemberCollectSubjectController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallmember:membercollectsubject:update")
+    ////@RequiresPermissions("mallmember:membercollectsubject:update")
     public R update(@RequestBody MemberCollectSubjectEntity memberCollectSubject){
 		memberCollectSubjectService.updateById(memberCollectSubject);
 
@@ -80,7 +80,7 @@ public class MemberCollectSubjectController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallmember:membercollectsubject:delete")
+    ////@RequiresPermissions("mallmember:membercollectsubject:delete")
     public R delete(@RequestBody Long[] ids){
 		memberCollectSubjectService.removeByIds(Arrays.asList(ids));
 

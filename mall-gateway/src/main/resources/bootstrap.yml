@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 116.85.44.154:8848
+      config:
+        server-addr: 116.85.44.154:8848
+        namespace: ce08542d-d58b-4873-9d1f-eac4d1738bfd
+        group: dev
+        file-extension: yml

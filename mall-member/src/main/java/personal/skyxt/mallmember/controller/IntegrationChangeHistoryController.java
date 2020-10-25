@@ -35,7 +35,7 @@ public class IntegrationChangeHistoryController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallmember:integrationchangehistory:list")
+    ////@RequiresPermissions("mallmember:integrationchangehistory:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = integrationChangeHistoryService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class IntegrationChangeHistoryController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallmember:integrationchangehistory:info")
+    ////@RequiresPermissions("mallmember:integrationchangehistory:info")
     public R info(@PathVariable("id") Long id){
 		IntegrationChangeHistoryEntity integrationChangeHistory = integrationChangeHistoryService.getById(id);
 
@@ -58,7 +58,7 @@ public class IntegrationChangeHistoryController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallmember:integrationchangehistory:save")
+    ////@RequiresPermissions("mallmember:integrationchangehistory:save")
     public R save(@RequestBody IntegrationChangeHistoryEntity integrationChangeHistory){
 		integrationChangeHistoryService.save(integrationChangeHistory);
 
@@ -69,7 +69,7 @@ public class IntegrationChangeHistoryController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallmember:integrationchangehistory:update")
+    ////@RequiresPermissions("mallmember:integrationchangehistory:update")
     public R update(@RequestBody IntegrationChangeHistoryEntity integrationChangeHistory){
 		integrationChangeHistoryService.updateById(integrationChangeHistory);
 
@@ -80,7 +80,7 @@ public class IntegrationChangeHistoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallmember:integrationchangehistory:delete")
+    ////@RequiresPermissions("mallmember:integrationchangehistory:delete")
     public R delete(@RequestBody Long[] ids){
 		integrationChangeHistoryService.removeByIds(Arrays.asList(ids));
 

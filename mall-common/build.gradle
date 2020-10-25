@@ -5,8 +5,8 @@ dependencies {
     compile('org.apache.httpcomponents:httpclient:4.5.12')
     compile('org.apache.commons:commons-lang3:3.10')
     compile('mysql:mysql-connector-java:8.0.17')
-    compile('com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery')
-    compile('com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config')
+//    compile('com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery')
+//    compile('com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config')
     compile('org.springframework.cloud:spring-cloud-starter-openfeign')
     compileOnly('javax.servlet:servlet-api:2.5')
     testCompile group: 'junit', name: 'junit', version: '4.12'

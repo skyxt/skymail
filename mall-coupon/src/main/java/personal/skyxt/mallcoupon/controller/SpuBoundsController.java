@@ -35,7 +35,7 @@ public class SpuBoundsController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallcoupon:spubounds:list")
+    ////@RequiresPermissions("mallcoupon:spubounds:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = spuBoundsService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class SpuBoundsController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallcoupon:spubounds:info")
+    ////@RequiresPermissions("mallcoupon:spubounds:info")
     public R info(@PathVariable("id") Long id){
 		SpuBoundsEntity spuBounds = spuBoundsService.getById(id);
 
@@ -58,7 +58,7 @@ public class SpuBoundsController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallcoupon:spubounds:save")
+    ////@RequiresPermissions("mallcoupon:spubounds:save")
     public R save(@RequestBody SpuBoundsEntity spuBounds){
 		spuBoundsService.save(spuBounds);
 
@@ -69,7 +69,7 @@ public class SpuBoundsController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallcoupon:spubounds:update")
+    ////@RequiresPermissions("mallcoupon:spubounds:update")
     public R update(@RequestBody SpuBoundsEntity spuBounds){
 		spuBoundsService.updateById(spuBounds);
 
@@ -80,7 +80,7 @@ public class SpuBoundsController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallcoupon:spubounds:delete")
+    ////@RequiresPermissions("mallcoupon:spubounds:delete")
     public R delete(@RequestBody Long[] ids){
 		spuBoundsService.removeByIds(Arrays.asList(ids));
 

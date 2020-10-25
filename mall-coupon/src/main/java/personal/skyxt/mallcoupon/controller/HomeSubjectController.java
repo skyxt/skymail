@@ -35,7 +35,7 @@ public class HomeSubjectController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallcoupon:homesubject:list")
+    ////@RequiresPermissions("mallcoupon:homesubject:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = homeSubjectService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class HomeSubjectController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallcoupon:homesubject:info")
+    ////@RequiresPermissions("mallcoupon:homesubject:info")
     public R info(@PathVariable("id") Long id){
 		HomeSubjectEntity homeSubject = homeSubjectService.getById(id);
 
@@ -58,7 +58,7 @@ public class HomeSubjectController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallcoupon:homesubject:save")
+    ////@RequiresPermissions("mallcoupon:homesubject:save")
     public R save(@RequestBody HomeSubjectEntity homeSubject){
 		homeSubjectService.save(homeSubject);
 
@@ -69,7 +69,7 @@ public class HomeSubjectController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallcoupon:homesubject:update")
+    ////@RequiresPermissions("mallcoupon:homesubject:update")
     public R update(@RequestBody HomeSubjectEntity homeSubject){
 		homeSubjectService.updateById(homeSubject);
 
@@ -80,7 +80,7 @@ public class HomeSubjectController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallcoupon:homesubject:delete")
+    ////@RequiresPermissions("mallcoupon:homesubject:delete")
     public R delete(@RequestBody Long[] ids){
 		homeSubjectService.removeByIds(Arrays.asList(ids));
 

@@ -35,7 +35,7 @@ public class MemberLoginLogController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallmember:memberloginlog:list")
+    ////@RequiresPermissions("mallmember:memberloginlog:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = memberLoginLogService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class MemberLoginLogController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallmember:memberloginlog:info")
+    ////@RequiresPermissions("mallmember:memberloginlog:info")
     public R info(@PathVariable("id") Long id){
 		MemberLoginLogEntity memberLoginLog = memberLoginLogService.getById(id);
 
@@ -58,7 +58,7 @@ public class MemberLoginLogController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallmember:memberloginlog:save")
+    ////@RequiresPermissions("mallmember:memberloginlog:save")
     public R save(@RequestBody MemberLoginLogEntity memberLoginLog){
 		memberLoginLogService.save(memberLoginLog);
 
@@ -69,7 +69,7 @@ public class MemberLoginLogController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallmember:memberloginlog:update")
+    ////@RequiresPermissions("mallmember:memberloginlog:update")
     public R update(@RequestBody MemberLoginLogEntity memberLoginLog){
 		memberLoginLogService.updateById(memberLoginLog);
 
@@ -80,7 +80,7 @@ public class MemberLoginLogController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallmember:memberloginlog:delete")
+    ////@RequiresPermissions("mallmember:memberloginlog:delete")
     public R delete(@RequestBody Long[] ids){
 		memberLoginLogService.removeByIds(Arrays.asList(ids));
 

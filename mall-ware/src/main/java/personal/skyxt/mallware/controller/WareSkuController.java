@@ -35,7 +35,7 @@ public class WareSkuController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallware:waresku:list")
+    ////@RequiresPermissions("mallware:waresku:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wareSkuService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class WareSkuController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallware:waresku:info")
+    ////@RequiresPermissions("mallware:waresku:info")
     public R info(@PathVariable("id") Long id){
 		WareSkuEntity wareSku = wareSkuService.getById(id);
 
@@ -58,7 +58,7 @@ public class WareSkuController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallware:waresku:save")
+    ////@RequiresPermissions("mallware:waresku:save")
     public R save(@RequestBody WareSkuEntity wareSku){
 		wareSkuService.save(wareSku);
 
@@ -69,7 +69,7 @@ public class WareSkuController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallware:waresku:update")
+    ////@RequiresPermissions("mallware:waresku:update")
     public R update(@RequestBody WareSkuEntity wareSku){
 		wareSkuService.updateById(wareSku);
 
@@ -80,7 +80,7 @@ public class WareSkuController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallware:waresku:delete")
+    ////@RequiresPermissions("mallware:waresku:delete")
     public R delete(@RequestBody Long[] ids){
 		wareSkuService.removeByIds(Arrays.asList(ids));
 

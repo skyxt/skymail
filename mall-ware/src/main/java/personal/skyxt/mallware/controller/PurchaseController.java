@@ -35,7 +35,7 @@ public class PurchaseController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallware:purchase:list")
+    ////@RequiresPermissions("mallware:purchase:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = purchaseService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PurchaseController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallware:purchase:info")
+    ////@RequiresPermissions("mallware:purchase:info")
     public R info(@PathVariable("id") Long id){
 		PurchaseEntity purchase = purchaseService.getById(id);
 
@@ -58,7 +58,7 @@ public class PurchaseController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallware:purchase:save")
+    ////@RequiresPermissions("mallware:purchase:save")
     public R save(@RequestBody PurchaseEntity purchase){
 		purchaseService.save(purchase);
 
@@ -69,7 +69,7 @@ public class PurchaseController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallware:purchase:update")
+    ////@RequiresPermissions("mallware:purchase:update")
     public R update(@RequestBody PurchaseEntity purchase){
 		purchaseService.updateById(purchase);
 
@@ -80,7 +80,7 @@ public class PurchaseController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallware:purchase:delete")
+    ////@RequiresPermissions("mallware:purchase:delete")
     public R delete(@RequestBody Long[] ids){
 		purchaseService.removeByIds(Arrays.asList(ids));
 

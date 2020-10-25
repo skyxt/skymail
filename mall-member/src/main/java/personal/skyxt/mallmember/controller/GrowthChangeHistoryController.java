@@ -35,7 +35,7 @@ public class GrowthChangeHistoryController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallmember:growthchangehistory:list")
+    ////@RequiresPermissions("mallmember:growthchangehistory:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = growthChangeHistoryService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class GrowthChangeHistoryController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallmember:growthchangehistory:info")
+    ////@RequiresPermissions("mallmember:growthchangehistory:info")
     public R info(@PathVariable("id") Long id){
 		GrowthChangeHistoryEntity growthChangeHistory = growthChangeHistoryService.getById(id);
 
@@ -58,7 +58,7 @@ public class GrowthChangeHistoryController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallmember:growthchangehistory:save")
+    ////@RequiresPermissions("mallmember:growthchangehistory:save")
     public R save(@RequestBody GrowthChangeHistoryEntity growthChangeHistory){
 		growthChangeHistoryService.save(growthChangeHistory);
 
@@ -69,7 +69,7 @@ public class GrowthChangeHistoryController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallmember:growthchangehistory:update")
+    ////@RequiresPermissions("mallmember:growthchangehistory:update")
     public R update(@RequestBody GrowthChangeHistoryEntity growthChangeHistory){
 		growthChangeHistoryService.updateById(growthChangeHistory);
 
@@ -80,7 +80,7 @@ public class GrowthChangeHistoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallmember:growthchangehistory:delete")
+    ////@RequiresPermissions("mallmember:growthchangehistory:delete")
     public R delete(@RequestBody Long[] ids){
 		growthChangeHistoryService.removeByIds(Arrays.asList(ids));
 

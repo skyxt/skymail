@@ -34,7 +34,7 @@ public class SpuInfoDescController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions(":spuinfodesc:list")
+    ////@RequiresPermissions(":spuinfodesc:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = spuInfoDescService.queryPage(params);
 
@@ -46,7 +46,7 @@ public class SpuInfoDescController {
      * 信息
      */
     @RequestMapping("/info/{spuId}")
-    //@RequiresPermissions(":spuinfodesc:info")
+    ////@RequiresPermissions(":spuinfodesc:info")
     public R info(@PathVariable("spuId") Long spuId){
 		SpuInfoDescEntity spuInfoDesc = spuInfoDescService.getById(spuId);
 
@@ -57,7 +57,7 @@ public class SpuInfoDescController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions(":spuinfodesc:save")
+    ////@RequiresPermissions(":spuinfodesc:save")
     public R save(@RequestBody SpuInfoDescEntity spuInfoDesc){
 		spuInfoDescService.save(spuInfoDesc);
 
@@ -68,7 +68,7 @@ public class SpuInfoDescController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions(":spuinfodesc:update")
+    ////@RequiresPermissions(":spuinfodesc:update")
     public R update(@RequestBody SpuInfoDescEntity spuInfoDesc){
 		spuInfoDescService.updateById(spuInfoDesc);
 
@@ -79,7 +79,7 @@ public class SpuInfoDescController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions(":spuinfodesc:delete")
+    ////@RequiresPermissions(":spuinfodesc:delete")
     public R delete(@RequestBody Long[] spuIds){
 		spuInfoDescService.removeByIds(Arrays.asList(spuIds));
 

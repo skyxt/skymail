@@ -35,7 +35,7 @@ public class RefundInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallorder:refundinfo:list")
+    ////@RequiresPermissions("mallorder:refundinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = refundInfoService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class RefundInfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallorder:refundinfo:info")
+    ////@RequiresPermissions("mallorder:refundinfo:info")
     public R info(@PathVariable("id") Long id){
 		RefundInfoEntity refundInfo = refundInfoService.getById(id);
 
@@ -58,7 +58,7 @@ public class RefundInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallorder:refundinfo:save")
+    ////@RequiresPermissions("mallorder:refundinfo:save")
     public R save(@RequestBody RefundInfoEntity refundInfo){
 		refundInfoService.save(refundInfo);
 
@@ -69,7 +69,7 @@ public class RefundInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallorder:refundinfo:update")
+    ////@RequiresPermissions("mallorder:refundinfo:update")
     public R update(@RequestBody RefundInfoEntity refundInfo){
 		refundInfoService.updateById(refundInfo);
 
@@ -80,7 +80,7 @@ public class RefundInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallorder:refundinfo:delete")
+    ////@RequiresPermissions("mallorder:refundinfo:delete")
     public R delete(@RequestBody Long[] ids){
 		refundInfoService.removeByIds(Arrays.asList(ids));
 

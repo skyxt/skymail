@@ -35,7 +35,7 @@ public class CouponHistoryController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("mallcoupon:couponhistory:list")
+    ////@RequiresPermissions("mallcoupon:couponhistory:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = couponHistoryService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class CouponHistoryController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("mallcoupon:couponhistory:info")
+    ////@RequiresPermissions("mallcoupon:couponhistory:info")
     public R info(@PathVariable("id") Long id){
 		CouponHistoryEntity couponHistory = couponHistoryService.getById(id);
 
@@ -58,7 +58,7 @@ public class CouponHistoryController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("mallcoupon:couponhistory:save")
+    ////@RequiresPermissions("mallcoupon:couponhistory:save")
     public R save(@RequestBody CouponHistoryEntity couponHistory){
 		couponHistoryService.save(couponHistory);
 
@@ -69,7 +69,7 @@ public class CouponHistoryController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("mallcoupon:couponhistory:update")
+    ////@RequiresPermissions("mallcoupon:couponhistory:update")
     public R update(@RequestBody CouponHistoryEntity couponHistory){
 		couponHistoryService.updateById(couponHistory);
 
@@ -80,7 +80,7 @@ public class CouponHistoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("mallcoupon:couponhistory:delete")
+    ////@RequiresPermissions("mallcoupon:couponhistory:delete")
     public R delete(@RequestBody Long[] ids){
 		couponHistoryService.removeByIds(Arrays.asList(ids));
 

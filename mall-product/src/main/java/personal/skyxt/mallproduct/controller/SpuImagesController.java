@@ -34,7 +34,7 @@ public class SpuImagesController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions(":spuimages:list")
+    ////@RequiresPermissions(":spuimages:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = spuImagesService.queryPage(params);
 
@@ -46,7 +46,7 @@ public class SpuImagesController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions(":spuimages:info")
+    ////@RequiresPermissions(":spuimages:info")
     public R info(@PathVariable("id") Long id){
 		SpuImagesEntity spuImages = spuImagesService.getById(id);
 
@@ -57,7 +57,7 @@ public class SpuImagesController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions(":spuimages:save")
+    ////@RequiresPermissions(":spuimages:save")
     public R save(@RequestBody SpuImagesEntity spuImages){
 		spuImagesService.save(spuImages);
 
@@ -68,7 +68,7 @@ public class SpuImagesController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions(":spuimages:update")
+    ////@RequiresPermissions(":spuimages:update")
     public R update(@RequestBody SpuImagesEntity spuImages){
 		spuImagesService.updateById(spuImages);
 
@@ -79,7 +79,7 @@ public class SpuImagesController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions(":spuimages:delete")
+    ////@RequiresPermissions(":spuimages:delete")
     public R delete(@RequestBody Long[] ids){
 		spuImagesService.removeByIds(Arrays.asList(ids));
 
