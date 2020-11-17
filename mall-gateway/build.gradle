@@ -3,6 +3,8 @@ configurations {
 }
 dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+    compile('com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery')
+    compile('com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config')
     compile project(':mall-common')
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

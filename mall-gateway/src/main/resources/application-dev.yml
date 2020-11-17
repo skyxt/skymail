@@ -3,7 +3,7 @@ spring:
     gateway:
       routes:
         - id: admin_route
-          uri: http://localhost:8080
+          uri: lb://renren-fast
           predicates:
             - Path=/api/**
           filters:
