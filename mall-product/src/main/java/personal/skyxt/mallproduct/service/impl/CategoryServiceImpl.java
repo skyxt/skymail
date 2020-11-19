@@ -43,6 +43,6 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     private CategoryEntity addChildren(CategoryEntity categoryEntity, List<CategoryEntity> list) {
         return categoryEntity.setChildren(list.stream().filter(
                 category -> category.getParentCid().equals(categoryEntity.getCatId())
-        ).collect(Collectors.toList()));
+        ).map(category -> addChildren(category, list)).collect(Collectors.toList()));
     }
 }
